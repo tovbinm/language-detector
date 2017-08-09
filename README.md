@@ -1,4 +1,5 @@
 # language-detector
+[![Build Status](https://travis-ci.org/relateiq/language-detector.svg?branch=master)](https://travis-ci.org/relateiq/language-detector)
 
 Language Detection Library for Java
 
