@@ -4,9 +4,9 @@
 Language Detection Library for Java
 
     <dependency>
-        <groupId>com.optimaize.languagedetector</groupId>
+        <groupId>com.salesforce.transmogrifai</groupId>
         <artifactId>language-detector</artifactId>
-        <version>0.7.1</version>
+        <version>0.0.1</version>
     </dependency>
 
 
@@ -197,10 +197,10 @@ For detail see https://github.com/optimaize/language-detector/wiki/Authors
 
 ## For Maven Users
 
-The project is in Maven central http://search.maven.org/#artifactdetails%7Ccom.optimaize.languagedetector%7Clanguage-detector%7C0.4%7Cjar this is the latest version:
+The project is in Maven central https://search.maven.org/search?q=g:com.salesforce.transmogrifai%20AND%20a:language-detector this is the latest version:
 
     <dependency>
-        <groupId>com.optimaize.languagedetector</groupId>
+        <groupId>com.salesforce.transmogrifai</groupId>
         <artifactId>language-detector</artifactId>
-        <version>0.7.1</version>
+        <version>0.0.1</version>
     </dependency>

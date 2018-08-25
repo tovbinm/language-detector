@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.optimaize.languagedetector</groupId>
+    <groupId>com.salesforce.transmogrifai</groupId>
     <artifactId>language-detector</artifactId>
     <name>language-detector</name>
-    <version>0.7.1</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <url>https://github.com/optimaize/language-detector</url>
+    <url>https://github.com/tovbinm/language-detector</url>
     <description>
         Language Detection Library for Java.
     </description>
@@ -43,9 +43,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/optimaize/language-detector</connection>
-        <developerConnection>scm:git:https://github.com/optimaize/language-detector</developerConnection>
-        <url>https://github.com/optimaize/language-detector</url>
+        <connection>scm:git:https://github.com/tovbinm/language-detector.git</connection>
+        <developerConnection>scm:git:https://github.com/tovbinm/language-detector</developerConnection>
+        <url>https://github.com/tovbinm/language-detector</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -84,29 +84,33 @@
                 <executions>
                     <execution>
                         <id>attach-sources</id>
-                        <phase>verify</phase>
+                        <!-- <phase>verify</phase> -->
                         <goals>
-                            <goal>jar-no-fork</goal>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
 
             <!-- Required: javadoc JAR -->
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.9.1</version>
                 <executions>
                     <execution>
                         <id>attach-javadoc</id>
-                        <phase>verify</phase>
+                        <!-- <phase>verify</phase> -->
                         <goals>
                             <goal>jar</goal>
                         </goals>
+                        <configuration>
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                        </configuration>
                     </execution>
+
                 </executions>
-            </plugin> -->
+            </plugin>
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -148,7 +152,7 @@
 
             <plugin>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.4</version>
+                <version>1.6</version>
             </plugin>
 
         </plugins>
@@ -168,7 +172,7 @@
         </pluginManagement>
     </build>
 
-    <distributionManagement>
+   <!--  <distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus snapshot repository</name>
@@ -178,6 +182,13 @@
             <id>sonatype-nexus-staging</id>
             <name>Sonatype Nexus release repository</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement> -->
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-repo-maven</id>
+            <url>https://api.bintray.com/maven/salesforce/maven/TransmogrifAI/;publish=1</url>
         </repository>
     </distributionManagement>
 
@@ -195,7 +206,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
-                    <version>1.4</version>
+                    <version>1.6</version>
                     <!--<configuration>-->
                     <!--<passphrase>${gpg.passphrase}</passphrase>-->
                     <!--</configuration>-->
